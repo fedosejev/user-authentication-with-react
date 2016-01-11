@@ -32,24 +32,24 @@ var Application = React.createClass({
     });
   },
 
-  changeCurrentPageTo: function (pageName) {
+  setCurrentPageTo: function (pageName) {
     this.setState({
       currentPage: pageName
     });
   },
 
   showLandingPage: function () {
-    this.changeCurrentPageTo(PAGES.LANDING);
+    this.setCurrentPageTo(PAGES.LANDING);
   },
 
   showSignUpPage: function () {
     this.clearMessages();
-    this.changeCurrentPageTo(PAGES.SIGN_UP);
+    this.setCurrentPageTo(PAGES.SIGN_UP);
   },
 
   showLogInPage: function () {
     this.clearMessages();
-    this.changeCurrentPageTo(PAGES.LOG_IN);
+    this.setCurrentPageTo(PAGES.LOG_IN);
   },
 
   showPageAfterLogIn: function (pageName) {
@@ -60,10 +60,10 @@ var Application = React.createClass({
 
   showMyCoursesPage: function () {
     if (this.isUserLoggedIn()) {
-      this.changeCurrentPageTo(PAGES.MY_COURSES);
+      this.setCurrentPageTo(PAGES.MY_COURSES);
     } else {
       this.showPageAfterLogIn(PAGES.MY_COURSES);
-      this.changeCurrentPageTo(PAGES.LOG_IN);
+      this.setCurrentPageTo(PAGES.LOG_IN);
     }
   },
 
@@ -106,7 +106,7 @@ var Application = React.createClass({
         this.showSuccessMessage('Thanks for joining!');
 
         if (this.state.pageToShowAfterLogin) {
-          this.changeCurrentPageTo(this.state.pageToShowAfterLogin);
+          this.setCurrentPageTo(this.state.pageToShowAfterLogin);
           this.showPageAfterLogIn(null);
         } else {
           this.showLandingPage();
@@ -127,7 +127,7 @@ var Application = React.createClass({
       this.showSuccessMessage('Welcome back!');
 
       if (this.state.pageToShowAfterLogin) {
-        this.changeCurrentPageTo(this.state.pageToShowAfterLogin);
+        this.setCurrentPageTo(this.state.pageToShowAfterLogin);
         this.showPageAfterLogIn(null);
       } else {
         this.showLandingPage();
