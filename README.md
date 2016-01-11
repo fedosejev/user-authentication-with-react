@@ -4,7 +4,7 @@ Works together with https://github.com/fedosejev/express-api-token-authenticatio
 
 ## How to run?
 
-First install this RESTful API server: https://github.com/fedosejev/express-api-token-authentication
+First install and run this RESTful API server: https://github.com/fedosejev/express-api-token-authentication
 
 Then:
 
