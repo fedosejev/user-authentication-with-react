@@ -1,2 +1,3 @@
-# user-authentication-with-react
-Example of how to build user authentication with React.js
+# How to authenticate user with React.js?
+
+Works together with https://github.com/fedosejev/express-api-token-authentication.
