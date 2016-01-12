@@ -16,4 +16,4 @@ Then:
 
 ## Want to learn more about React.js?
 
-Check out my book - React.js Essentials: https://github.com/fedosejev/react-essentials
+Check out my [React.js Essentials](http://reactessentials.com) book.
