@@ -17,8 +17,9 @@ function signUp(username, password, handleResponse) {
   var request = jQuery.ajax({
     method: 'post',
     url: HOST_NAME + API_ENDPOINTS.SIGN_UP,
-    dataType: 'json',
-    data: data
+    contentType: 'application/json',
+    data: JSON.stringify(data),
+    dataType: 'json'
   });
 
   request.fail(function (jqXHR, textStatus, errorThrown) {
@@ -40,8 +41,9 @@ function logIn(username, password, handleResponse) {
   var request = jQuery.ajax({
     method: 'post',
     url: HOST_NAME + API_ENDPOINTS.LOG_IN,
-    dataType: 'json',
-    data: data
+    contentType: 'application/json',
+    data: JSON.stringify(data),
+    dataType: 'json'
   });
 
   request.fail(function (jqXHR, textStatus, errorThrown) {
